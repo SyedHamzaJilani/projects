@@ -41,6 +41,7 @@ def save_data(driver, data_xpath, file_name="Selenium_File", folder_path=None):
     file_path = os.path.join(folder_path, f"{file_name}.txt")
     with open(file_path, "w") as file:
         file.write(store_data)
+    print(f"The file has been successfully saved in {folder_path} with the name {file_name}")
 
 
 web_driver = webdriver.Chrome()
@@ -55,7 +56,7 @@ click_on(web_driver,
          "//h3[contains(text(),'Python (programming language)')]")
 
 save_data(web_driver,
-          "//body[1]/div[2]/div[1]/div[3]/main[1]/div[3]/div[3]/div[1]/p[4]",
+          "//body[1]/div[2]/div[1]/div[3]/main[1]/div[3]/div[3]/div[1]/p[2]",
           "Python_Wiki")
 
 
